@@ -18,7 +18,7 @@
     "require-dev": {
         "phpunit/phpunit": "^5.7",
         "matthiasnoback/symfony-dependency-injection-test": "^1.2.0",
-        "ezsystems/ezplatform-solr-search-engine": "^1.5.7",
+        "se7enxweb/ezplatform-solr-search-engine": "^1.5.7",
         "friendsofphp/php-cs-fixer": "v2.14.2"
     },
     "autoload": {
