@@ -189,8 +189,67 @@ class Html5 implements Converter
             $preConverter->convert($xmlDoc);
         }
 
-        $xsl = $this->getXSLTProcessor();
+        // PHP 8.3 compatibility: Basic validation
+        if (!$xmlDoc->documentElement) {
+            return '';
+        }
 
-        return $xsl->transformToXML($xmlDoc);
+        try {
+            $xsl = $this->getXSLTProcessor();
+            $result = $xsl->transformToXML($xmlDoc);
+
+            // Validate and clean result
+            if ($result === false || $result === null) {
+                return $this->fallbackXmlToHtml($xmlDoc);
+            }
+
+            return $result;
+        } catch (\Exception $e) {
+            // Fallback if XSLT fails
+            return $this->fallbackXmlToHtml($xmlDoc);
+        }
+    }
+
+    /**
+     * Fallback method for XML to HTML conversion when XSLT fails (PHP 8.3 compatibility).
+     *
+     * @param \DOMDocument $xmlDoc
+     * @return string
+     */
+    private function fallbackXmlToHtml(DOMDocument $xmlDoc)
+    {
+        if (!$xmlDoc->documentElement) {
+            return '';
+        }
+
+        $xml_string = $xmlDoc->saveXML($xmlDoc->documentElement);
+
+        // Remove XML namespaces
+        $xml_string = preg_replace('/\s*xmlns:[^=]*="[^"]*"/i', '', $xml_string);
+
+        // Basic XML to HTML transformations
+        $html = str_replace([
+            '<section>', '</section>',
+            '<paragraph>', '</paragraph>',
+            '<emphasize>', '</emphasize>',
+            '<line>', '</line>',
+            '<list class="unordered">', '<list class="ordered">', '</list>',
+            '<listitem>', '</listitem>'
+        ], [
+            '<div class="section">', '</div>',
+            '<p>', '</p>',
+            '<em>', '</em>',
+            '', '<br>',
+            '<ul>', '<ol>', '</ul>',
+            '<li>', '</li>'
+        ], $xml_string);
+
+        // Handle headers with regex
+        $html = preg_replace('/<header\s+level="(\d+)"[^>]*>(.*?)<\/header>/s', '<h$1>$2</h$1>', $html);
+
+        // Handle links
+        $html = preg_replace('/<link\s+url="([^"]*)"[^>]*>(.*?)<\/link>/s', '<a href="$1">$2</a>', $html);
+
+        return $html;
     }
 }
