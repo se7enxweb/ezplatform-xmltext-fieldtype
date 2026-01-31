@@ -130,7 +130,11 @@ class Html5 implements Converter
 
         // Now loading custom xsl stylesheets dynamically.
         // According to XSL spec, each <xsl:import> tag MUST be loaded BEFORE any other element.
-        // PHP 8.3 fix: Handle null firstChild safely
+        // PHP 8.3 fix: Handle null documentElement and firstChild safely
+        if ($xslDoc->documentElement === null) {
+            throw new RuntimeException("Failed to load XSL stylesheet or stylesheet is invalid: " . $this->stylesheet);
+        }
+        
         $insertBeforeEl = $xslDoc->documentElement->firstChild;
         if ($insertBeforeEl === null) {
             // PHP 8.3: Create a text node as reference point if no firstChild exists
