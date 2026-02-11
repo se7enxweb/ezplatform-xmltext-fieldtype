@@ -123,11 +123,11 @@ class RichText implements Converter
     {
         $validators = array_merge(
             [
-                './vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/FieldType/RichText/Resources/schemas/docbook/ezpublish.rng',
+                './vendor/se7enxweb/ezpublish-kernel/eZ/Publish/Core/FieldType/RichText/Resources/schemas/docbook/ezpublish.rng',
             ],
             $customValidators,
             [
-                './vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/FieldType/RichText/Resources/schemas/docbook/docbook.iso.sch.xsl',
+                './vendor/se7enxweb/ezpublish-kernel/eZ/Publish/Core/FieldType/RichText/Resources/schemas/docbook/docbook.iso.sch.xsl',
             ]
         );
         $this->validator = new Validator($validators);
