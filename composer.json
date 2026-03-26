@@ -1,5 +1,5 @@
 {
-    "name": "ezsystems/ezplatform-xmltext-fieldtype",
+    "name": "se7enxweb/ezplatform-xmltext-fieldtype",
     "description": "XmlText field type implementation for eZ Platform",
     "license": "GPL-2.0-only",
     "type": "ezplatform-bundle",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.3 || ^8.0 || ^8.1 || ^8.2 || ^8.3 || ^8.4 || ^8.5",
         "ext-xsl": "*",
         "ext-dom": "*",
         "ezsystems/ezplatform-kernel": "^1.0",
@@ -51,5 +51,8 @@
         "branch-alias": {
             "dev-master": "2.0.x-dev"
         }
+    },
+    "replace": {
+        "ezsystems/ezplatform-xmltext-fieldtype": "self.version"
     }
 }
