@@ -11,7 +11,7 @@
 namespace eZ\Publish\Core\FieldType\XmlText\Converter;
 
 use DOMDocument;
-use eZ\Publish\Core\Base\Exceptions\InvalidArgumentType;
+use Ibexa\Core\Base\Exceptions\InvalidArgumentType;
 use eZ\Publish\Core\FieldType\XmlText\Converter;
 use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use RuntimeException;

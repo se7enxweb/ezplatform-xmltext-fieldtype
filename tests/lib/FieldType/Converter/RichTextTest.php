@@ -10,11 +10,11 @@ namespace EzSystems\EzPlatformXmlTextFieldType\Tests\FieldType\Converter;
 
 use DOMDocument;
 use DOMXPath;
-use eZ\Publish\API\Repository\ContentService;
-use eZ\Publish\API\Repository\LocationService;
+use Ibexa\Contracts\Core\Repository\ContentService;
+use Ibexa\Contracts\Core\Repository\LocationService;
 use eZ\Publish\API\Repository\Values\Content\ContentInfo;
 use eZ\Publish\API\Repository\Values\Content\Location;
-use eZ\Publish\Core\Base\Exceptions\NotFoundException;
+use Ibexa\Core\Base\Exceptions\NotFoundException;
 use eZ\Publish\Core\FieldType\XmlText\Converter\RichText;
 use eZ\Publish\Core\Repository\Repository;
 use EzSystems\EzPlatformRichText\eZ\RichText\Validator\Validator;

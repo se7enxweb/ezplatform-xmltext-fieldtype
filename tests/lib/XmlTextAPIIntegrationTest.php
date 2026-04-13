@@ -15,7 +15,7 @@ use eZ\Publish\API\Repository\Tests\FieldType\RelationSearchBaseIntegrationTestT
 use eZ\Publish\API\Repository\Tests\FieldType\SearchBaseIntegrationTest;
 use eZ\Publish\API\Repository\Values\Content\Content;
 use eZ\Publish\API\Repository\Values\Content\Field;
-use eZ\Publish\Core\Base\Exceptions\InvalidArgumentType;
+use Ibexa\Core\Base\Exceptions\InvalidArgumentType;
 use eZ\Publish\Core\FieldType\XmlText\Type as XmlTextType;
 use eZ\Publish\Core\FieldType\XmlText\Value as XmlTextValue;
 use eZ\Publish\Core\Repository\Values\Content\Relation;

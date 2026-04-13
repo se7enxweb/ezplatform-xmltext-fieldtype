@@ -11,9 +11,9 @@
 namespace eZ\Publish\Core\FieldType\XmlText\XmlTextStorage;
 
 use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway as UrlGateway;
-use eZ\Publish\SPI\FieldType\StorageGateway;
-use eZ\Publish\SPI\Persistence\Content\Field;
-use eZ\Publish\SPI\Persistence\Content\VersionInfo;
+use Ibexa\Contracts\Core\FieldType\StorageGateway;
+use Ibexa\Contracts\Core\Persistence\Content\Field;
+use Ibexa\Contracts\Core\Persistence\Content\VersionInfo;
 
 /**
  * Abstract gateway class for XmlText type.

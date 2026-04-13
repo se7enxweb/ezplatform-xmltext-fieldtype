@@ -2,7 +2,7 @@
 
 namespace eZ\Publish\Core\FieldType\XmlText;
 
-use eZ\Publish\API\Repository\FieldTypeService;
+use Ibexa\Contracts\Core\Repository\FieldTypeService;
 use EzSystems\EzPlatformContentForms\FieldType\DataTransformer\FieldValueTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;

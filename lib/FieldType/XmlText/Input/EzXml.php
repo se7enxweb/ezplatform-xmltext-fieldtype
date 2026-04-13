@@ -11,7 +11,7 @@
 namespace eZ\Publish\Core\FieldType\XmlText\Input;
 
 use DOMDocument;
-use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
+use Ibexa\Core\Base\Exceptions\InvalidArgumentException;
 use eZ\Publish\Core\FieldType\XmlText\Input;
 
 class EzXml extends Input

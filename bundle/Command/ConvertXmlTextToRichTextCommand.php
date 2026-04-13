@@ -9,7 +9,7 @@ namespace EzSystems\EzPlatformXmlTextFieldTypeBundle\Command;
 use Doctrine\DBAL\FetchMode;
 use DOMDocument;
 use ErrorException;
-use eZ\Publish\API\Repository\Repository;
+use Ibexa\Contracts\Core\Repository\Repository;
 use eZ\Publish\Core\FieldType\XmlText\Converter\RichText as RichTextConverter;
 use eZ\Publish\Core\FieldType\XmlText\Persistence\Legacy\ContentModelGateway as Gateway;
 use eZ\Publish\Core\FieldType\XmlText\Value;

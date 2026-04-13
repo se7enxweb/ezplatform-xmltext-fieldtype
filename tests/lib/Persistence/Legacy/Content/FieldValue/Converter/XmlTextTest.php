@@ -12,7 +12,7 @@ namespace EzSystems\EzPlatformXmlTextFieldType\Tests\Persistence\Legacy\Content\
 
 use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\XmlTextConverter;
 use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
-use eZ\Publish\SPI\Persistence\Content\FieldValue;
+use Ibexa\Contracts\Core\Persistence\Content\FieldValue;
 use PHPUnit\Framework\TestCase;
 
 /**

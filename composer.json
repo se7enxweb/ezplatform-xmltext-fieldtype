@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0 || ^8.1 || ^8.2 || ^8.3 || ^8.4 || ^8.5",
+        "php": "^8.4 || ^8.5",
         "ext-xsl": "*",
         "ext-dom": "*",
-        "se7enxweb/ezplatform-kernel": "^1.0",
-        "se7enxweb/ezplatform-content-forms": "^1.0",
-        "se7enxweb/ezplatform-richtext": "^2.0",
-        "se7enxweb/ezplatform-rest": "^1.0"
+        "ibexa/core": "^5.0",
+        "ibexa/content-forms": "^5.0",
+        "ibexa/fieldtype-richtext": "^5.0",
+        "ibexa/rest": "^5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
@@ -49,7 +49,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "2.0.x-dev",
+            "dev-5.x": "5.0.x-dev"
         }
     },
     "replace": {
