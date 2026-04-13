@@ -13,7 +13,7 @@ namespace eZ\Publish\Core\FieldType\XmlText\Converter;
 use DOMDocument;
 use Ibexa\Core\Base\Exceptions\InvalidArgumentType;
 use eZ\Publish\Core\FieldType\XmlText\Converter;
-use eZ\Publish\Core\MVC\ConfigResolverInterface;
+use Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface;
 use RuntimeException;
 use XSLTProcessor;
 

@@ -19,7 +19,7 @@ class XmlTextStorage extends GatewayBasedStorage
     /**
      * @see \eZ\Publish\SPI\FieldType\FieldStorage
      */
-    public function storeFieldData(VersionInfo $versionInfo, Field $field, array $context)
+    public function storeFieldData(VersionInfo $versionInfo, Field $field)
     {
         $update = $this->gateway->storeFieldData($versionInfo, $field);
 
@@ -33,14 +33,13 @@ class XmlTextStorage extends GatewayBasedStorage
      *
      * @param \eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param array $context
      */
-    public function getFieldData(VersionInfo $versionInfo, Field $field, array $context)
+    public function getFieldData(VersionInfo $versionInfo, Field $field)
     {
         $this->gateway->getFieldData($field);
     }
 
-    public function deleteFieldData(VersionInfo $versionInfo, array $fieldIds, array $context)
+    public function deleteFieldData(VersionInfo $versionInfo, array $fieldIds)
     {
         foreach ($fieldIds as $fieldId) {
             $this->gateway->unlinkUrl($fieldId, $versionInfo->versionNo);
@@ -55,9 +54,5 @@ class XmlTextStorage extends GatewayBasedStorage
     public function hasFieldData()
     {
         return true;
-    }
-
-    public function getIndexData(VersionInfo $versionInfo, Field $field, array $context)
-    {
     }
 }

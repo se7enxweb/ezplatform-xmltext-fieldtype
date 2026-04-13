@@ -18,7 +18,7 @@ use Ibexa\Contracts\Core\Repository\Exceptions\NotFoundException as APINotFoundE
 use Ibexa\Contracts\Core\Repository\Exceptions\UnauthorizedException as APIUnauthorizedException;
 use Ibexa\Contracts\Core\Repository\LocationService;
 use eZ\Publish\Core\FieldType\XmlText\Converter;
-use eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter;
+use Ibexa\Core\MVC\Symfony\Routing\UrlAliasRouter;
 use Psr\Log\LoggerInterface;
 
 class EzLinkToHtml5 implements Converter

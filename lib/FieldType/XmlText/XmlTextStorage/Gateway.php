@@ -10,7 +10,7 @@
  */
 namespace eZ\Publish\Core\FieldType\XmlText\XmlTextStorage;
 
-use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway as UrlGateway;
+use Ibexa\Core\FieldType\Url\UrlStorage\Gateway as UrlGateway;
 use Ibexa\Contracts\Core\FieldType\StorageGateway;
 use Ibexa\Contracts\Core\Persistence\Content\Field;
 use Ibexa\Contracts\Core\Persistence\Content\VersionInfo;

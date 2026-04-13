@@ -4,4 +4,4 @@ services:
         arguments:
             - "@ezpublish.fieldType.ezxmltext.storage_gateway"
         tags:
-            - {name: ezplatform.field_type.external_storage_handler, alias: ezxmltext}
+            - {name: ibexa.field_type.storage.external.handler, alias: ezxmltext}

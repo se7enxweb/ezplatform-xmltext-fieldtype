@@ -10,7 +10,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\FetchMode;
 use DOMDocument;
 use Ibexa\Core\Base\Exceptions\NotFoundException;
-use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway as UrlGateway;
+use Ibexa\Core\FieldType\Url\UrlStorage\Gateway as UrlGateway;
 use eZ\Publish\Core\FieldType\XmlText\XmlTextStorage\Gateway;
 use Ibexa\Contracts\Core\Persistence\Content\Field;
 use Ibexa\Contracts\Core\Persistence\Content\VersionInfo;

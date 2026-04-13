@@ -63,7 +63,7 @@ class EzSystemsEzPlatformXmlTextFieldTypeExtension extends Extension implements 
         // Field type's Content field and ContentType field definition templates
         $configFile = __DIR__ . '/../Resources/config/ezpublish.yml';
         $config = Yaml::parse(file_get_contents($configFile));
-        $container->prependExtensionConfig('ezpublish', $config);
+        $container->prependExtensionConfig('ibexa', $config);
         $container->addResource(new FileResource($configFile));
     }
 }

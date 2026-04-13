@@ -17,17 +17,14 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class EzSystemsEzPlatformXmlTextFieldTypeBundle extends Bundle
 {
-    public function build(ContainerBuilder $container)
+    public function build(ContainerBuilder $container): void
     {
         parent::build($container);
 
         $container->addCompilerPass(new XmlTextConverterPass());
 
-        /**
-         * @var \eZ\Bundle\EzPublishCoreBundle\DependencyInjection\EzPublishCoreExtension
-         */
-        $eZExtension = $container->getExtension('ezpublish');
-        $eZExtension->addConfigParser(new ConfigParser\FieldType\XmlText());
-        $eZExtension->addDefaultSettings(__DIR__ . '/Resources/config', ['default_settings.yml']);
+        $ibexaExtension = $container->getExtension('ibexa');
+        $ibexaExtension->addConfigParser(new ConfigParser\FieldType\XmlText());
+        $ibexaExtension->addDefaultSettings(__DIR__ . '/Resources/config', ['default_settings.yml']);
     }
 }

@@ -39,4 +39,4 @@ services:
         arguments:
             - "@ezpublish.api.repository"
             - "@?logger"
-            - "@ezrichtext.validator.docbook"
+            - "@ibexa.richtext.validator.docbook"

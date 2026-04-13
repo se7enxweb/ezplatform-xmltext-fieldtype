@@ -29,7 +29,7 @@ class ConvertXmlTextToRichTextCommandSubProcess extends ConvertXmlTextToRichText
             );
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->baseExecute($input, $output, $dryRun);
 

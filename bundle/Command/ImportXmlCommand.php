@@ -92,7 +92,7 @@ EOT
             );
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $dryRun = false;
         if ($input->getOption('dry-run')) {
