@@ -5,12 +5,12 @@ services:
         arguments:
             - '@?ezpublish.fieldType.ezxmltext.validator.internal_link'
         tags:
-            - {name: ezplatform.field_type, alias: ezxmltext}
+            - {name: ibexa.field_type, alias: ezxmltext}
 
     ezpublish.fieldType.ezxmltext.formMapper:
         class: eZ\Publish\Core\FieldType\XmlText\FormMapper
         tags:
-            - { name: ezplatform.field_type.form_mapper.value, fieldType: ezxmltext }
+            - { name: ibexa.field_type.form_mapper.value, fieldType: ezxmltext }
 
     ezpublish.fieldType.ezxmltext.formType:
         class: eZ\Publish\Core\FieldType\XmlText\FormType
