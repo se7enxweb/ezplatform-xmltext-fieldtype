@@ -15,6 +15,6 @@ services:
     ezpublish.fieldType.ezxmltext.formType:
         class: eZ\Publish\Core\FieldType\XmlText\FormType
         arguments:
-            - "@ezpublish.api.service.field_type"
+            - "@ibexa.api.service.field_type"
         tags:
             - { name: form.type }

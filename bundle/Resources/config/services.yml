@@ -7,12 +7,12 @@ services:
     ezxmltext.persistence.legacy.content_model_gateway:
         class: eZ\Publish\Core\FieldType\XmlText\Persistence\Legacy\ContentModelGateway
         arguments:
-            - "@ezpublish.persistence.connection"
+            - "@ibexa.persistence.connection"
 
     ezxmltext.command.convert_to_richtext:
         class: EzSystems\EzPlatformXmlTextFieldTypeBundle\Command\ConvertXmlTextToRichTextCommand
         arguments:
-            - "@ezpublish.api.repository"
+            - "@ibexa.api.repository"
             - "@ezxmltext.persistence.legacy.content_model_gateway"
             - "@ezxmltext.richtext_converter"
             - "%kernel.cache_dir%"
@@ -37,6 +37,6 @@ services:
     ezxmltext.richtext_converter:
         class: eZ\Publish\Core\FieldType\XmlText\Converter\RichText
         arguments:
-            - "@ezpublish.api.repository"
+            - "@ibexa.api.repository"
             - "@?logger"
             - "@ezrichtext.validator.docbook"
