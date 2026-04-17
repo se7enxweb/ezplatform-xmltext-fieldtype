@@ -24,7 +24,7 @@ services:
         arguments:
             - "@ibexa.api.service.location"
             - "@ibexa.api.service.content"
-            - "@Ibexa\Bundle\Core\Routing\UrlAliasRouter"
+            - '@Ibexa\Bundle\Core\Routing\UrlAliasRouter'
             - "@?logger"
         tags:
             - { name: ezpublish.ezxml.converter, priority: 16 }
