@@ -65,7 +65,7 @@ class Type extends FieldType
      *
      * @param \eZ\Publish\Core\FieldType\XmlText\InternalLinkValidator|null $internalLinkValidator
      */
-    public function __construct(InternalLinkValidator $internalLinkValidator = null)
+    public function __construct( ?InternalLinkValidator $internalLinkValidator = null)
     {
         $this->internalLinkValidator = $internalLinkValidator;
     }

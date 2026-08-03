@@ -70,9 +70,9 @@ class RichText implements Converter
      * @param Validator $validator
      */
     public function __construct(
-        Repository $apiRepository = null,
-        LoggerInterface $logger = null,
-        Validator $validator = null
+         ?Repository $apiRepository = null,
+         ?LoggerInterface $logger = null,
+         ?Validator $validator = null
     ) {
         $this->validator = $validator;
 

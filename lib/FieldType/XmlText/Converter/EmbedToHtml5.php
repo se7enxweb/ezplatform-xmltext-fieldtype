@@ -73,7 +73,7 @@ class EmbedToHtml5 implements Converter
         FragmentHandler $fragmentHandler,
         Repository $repository,
         array $excludedAttributes,
-        LoggerInterface $logger = null
+         ?LoggerInterface $logger = null
     ) {
         $this->fragmentHandler = $fragmentHandler;
         $this->repository = $repository;

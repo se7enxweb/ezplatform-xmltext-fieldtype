@@ -43,7 +43,7 @@ class EzLinkToHtml5 implements Converter
      */
     protected $logger;
 
-    public function __construct(LocationService $locationService, ContentService $contentService, UrlAliasRouter $urlAliasRouter, LoggerInterface $logger = null)
+    public function __construct(LocationService $locationService, ContentService $contentService, UrlAliasRouter $urlAliasRouter,  ?LoggerInterface $logger = null)
     {
         $this->locationService = $locationService;
         $this->contentService = $contentService;
